@@ -4,12 +4,10 @@ import FormRegister from "../../components/RightSection/FormRegister";
 
 const RegisterPage = () => {
   return (
-    <>
-      <MainContainer>
-        <LeftSection />
-        <FormRegister />
-      </MainContainer>
-    </>
+    <MainContainer>
+      <LeftSection />
+      <FormRegister />
+    </MainContainer>
   );
 };
 
