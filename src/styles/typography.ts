@@ -11,7 +11,7 @@ const GlobalTypography = createGlobalStyle`
   }
 
   .title3 {
-    font-size: ${convertToRem(25)};
+    font-size: ${convertToRem(24)};
   }
 
   .title4 {
@@ -40,6 +40,10 @@ const GlobalTypography = createGlobalStyle`
 
   .text-center {
     text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
   }
 `;
 

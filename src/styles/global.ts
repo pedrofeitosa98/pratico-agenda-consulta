@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import convertToRem from "../utils/convertToRem";
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -12,9 +11,18 @@ const GlobalStyle = createGlobalStyle`
     --black-1: #1D1D1D;
     --black-2: #000000;
     --big-radius: 18px;
+    --left-radius: 18px 0px 0px 18px;
+    --right-radius: 0px 18px 18px 0px;
     --small-radius: 8px;
     --animate-time: 0.3s;
     --shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  @media (max-height: 750px) {
+  :root{font-size: 14px} 
+  }
+  @media (max-width: 1050px) {
+    :root{font-size: 12px}
   }
 
   * {
@@ -50,6 +58,12 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
   }
 
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   body, input, button, ::placeholder {
     font-family: 'Inter', sans-serif;
   }
@@ -74,33 +88,6 @@ const GlobalStyle = createGlobalStyle`
     text-align: left;
     
     list-style: none;
-  }
-
-  .full-container {
-    width: 90%;
-    height: 90%;
-    
-    max-width: 920px;
-    
-    margin: 0 auto;
-
-    padding-left: 15px;
-    padding-right: 15px;
-
-    background-color: var(--white);
-  }
-
-  .right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 50%;
-    height: 100%;
-
-    overflow-y: auto;
-
-    padding: ${convertToRem(80)} ${convertToRem(56)};
   }
 `;
 
