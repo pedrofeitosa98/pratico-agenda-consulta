@@ -4,12 +4,10 @@ import FormLogin from "../../components/RightSection/FormLogin";
 
 const LoginPage = () => {
   return (
-    <>
-      <MainContainer>
-        <LeftSection />
-        <FormLogin />
-      </MainContainer>
-    </>
+    <MainContainer>
+      <LeftSection />
+      <FormLogin />
+    </MainContainer>
   );
 };
 

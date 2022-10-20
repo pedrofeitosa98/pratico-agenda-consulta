@@ -10,15 +10,15 @@ const LeftSection = () => {
         <table>
           <tr>
             <td className="text-right text-bold">1000+</td>
-            <td className="">clínicas</td>
+            <td>clínicas</td>
           </tr>
           <tr>
             <td className="text-righ text-bold">12.000+</td>
-            <td className="">laboratórios</td>
+            <td>laboratórios</td>
           </tr>
           <tr>
             <td className="text-right text-bold">500+</td>
-            <td className="">farmácias</td>
+            <td>farmácias</td>
           </tr>
         </table>
         <p>

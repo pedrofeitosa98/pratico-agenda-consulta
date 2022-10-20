@@ -4,12 +4,10 @@ import LogoStyle from "./style";
 
 const Logo = () => {
   return (
-    <>
-      <LogoStyle>
-        <img id="icon" src={icon} alt="" />
-        <img id="name" src={name} alt="" />
-      </LogoStyle>
-    </>
+    <LogoStyle>
+      <img id="icon" src={icon} alt="" />
+      <img id="name" src={name} alt="" />
+    </LogoStyle>
   );
 };
 
