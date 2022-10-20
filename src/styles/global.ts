@@ -1,6 +1,22 @@
 import { createGlobalStyle } from "styled-components";
+import convertToRem from "../utils/convertToRem";
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
+  :root{
+    --page-color: #FFEEEE;
+    --primary-color: #E93B3D;
+    --white: #FFFFFF;
+    --gray-1: #E0E0E0;
+    --gray-2: #BFBFBF;
+    --gray-3: #A4A4A4;
+    --black-1: #1D1D1D;
+    --black-2: #000000;
+    --big-radius: 18px;
+    --small-radius: 8px;
+    --animate-time: 0.3s;
+    --shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -8,6 +24,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
 
     outline: 0;
+    border: 0;
   }
 
   html {
@@ -15,8 +32,8 @@ export default createGlobalStyle`
   }
   
   body {
-    background-color: #F2EDF5;
-    color: #212529;
+    background-color: var(--page-color);
+    color: var(--black-1);
     
     font-weight: 500;
 
@@ -33,8 +50,8 @@ export default createGlobalStyle`
     min-height: 100vh;
   }
 
-  body, input, button {
-    font-family: "Montserrat", sans-serif;
+  body, input, button, ::placeholder {
+    font-family: 'Inter', sans-serif;
   }
 
   a {
@@ -59,9 +76,9 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  .container {
-    width: 100%;
-    height: 100%;
+  .full-container {
+    width: 90%;
+    height: 90%;
     
     max-width: 920px;
     
@@ -69,5 +86,22 @@ export default createGlobalStyle`
 
     padding-left: 15px;
     padding-right: 15px;
+
+    background-color: var(--white);
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 100%;
+
+    overflow-y: auto;
+
+    padding: ${convertToRem(80)} ${convertToRem(56)};
   }
 `;
+
+export default GlobalStyle;
